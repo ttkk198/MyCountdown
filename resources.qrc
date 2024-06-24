@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>texts/rhymes.txt</file>
+        <file>images/crown.png</file>
+        <file>sounds/fireworks.wav</file>
+        <file>sounds/out.wav</file>
+    </qresource>
+</RCC>
