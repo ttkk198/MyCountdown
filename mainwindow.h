@@ -9,6 +9,8 @@
 #include <QTimer>
 #include <QTextToSpeech>
 #include "person.h"
+#include <QTimeEdit>
+#include "dateTimeWidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +27,10 @@ public:
 private slots:
     void onNextWordButtonClicked();
     void updateRhymeWord();
+    void showGameWidget();
+    void closeActiveGame();
+    void showDateTimeWidget();
+    void hideDateTimeWidget();
 
 private:
     QTextToSpeech *textToSpeech;
@@ -39,7 +45,11 @@ private:
     QTimer *rhymeTimer;
     bool rhymeRunning;
     QLabel *highlightedLabel;
-
+    int CountdownRuns=0;
+    QVector<QString> rhymes;
+    QString rhyme;
+    bool gameClosed=true;
+    bool DDClosed=true;
     QVector<QString> loadRhymes(const QString &filePath);
     QList<Person> loadPhotos(const QString &folderPath);
     void displayPhotosInCircle(const QList<Person> &persons);
@@ -50,6 +60,9 @@ private:
     void playSoundEffect(const QString &soundPath);
     void animateRemoval(QLabel *label);
     void displayWinner(QLabel *winnerLabel);
+
+    DateTimeWidget *dateTimeWidget;
+
 };
 
 #endif // MAINWINDOW_H

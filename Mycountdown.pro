@@ -5,11 +5,13 @@ TARGET = Mycountdown
 TEMPLATE = app
 
 SOURCES += \
+        dateTimeWidget.cpp \
         main.cpp \
         mainwindow.cpp \
         person.cpp
 
 HEADERS += \
+        dateTimeWidget.h \
         mainwindow.h \
         person.h
 
