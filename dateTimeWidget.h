@@ -10,7 +10,9 @@
 #include <QDate>
 #include <QTime>
 #include <QDialog>
-#include <QDateTimeEdit>>
+#include <QDateTimeEdit>
+#include <QTextEdit>
+#include <QLabel>
 class DateTimeWidget : public QWidget
 {
     Q_OBJECT
@@ -21,14 +23,15 @@ public:
 private slots:
     void showCalendar();
     void updateDateTimeLineEdit();
-    void validateAndUpdateDateTime();
-
+    void on_dateTimeLineEdit_textEdited(const QString &arg1);
 private:
     QLineEdit *dateTimeLineEdit;
     QPushButton *calendarButton;
     QVBoxLayout *mainLayout;
     QDate selectedDate;
     QTime selectedTime;
+    QLabel *status;
+    QTextEdit *result1;
 };
 
 #endif // DATETIMEWIDGET_H

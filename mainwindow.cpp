@@ -1,10 +1,3 @@
-/*
- *
- *
- * После экскурсии, гит епам и еду фпм, в понедельник сбросить на почту первую часть отчета. На еду пример.
- *
- *
-*/
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QFile>
@@ -360,10 +353,9 @@ void MainWindow::showDateTimeWidget()
     }
     DDClosed=false;
     dateTimeWidget = new DateTimeWidget(this);
-    dateTimeWidget->setVisible(false);
     dateTimeWidget->show();
     dateTimeWidget->setFixedWidth(400);
-    dateTimeWidget->setFixedHeight(50);
+    dateTimeWidget->setFixedHeight(500);
     dateTimeWidget->move(300, 100);
     dateTimeWidget->setVisible(true);
 }
